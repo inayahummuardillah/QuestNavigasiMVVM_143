@@ -69,7 +69,68 @@ fun FormulirView(
                 }
             }
         }
-
+        TextField(
+            value = nim,
+            onValueChange = {nim = it},
+            label = {
+                Text(text = "nim")
+            },
+            placeholder = {
+                Text(text = "Isi nim anda")
+            },
+            modifier = Modifier.fillMaxWidth().padding(5.dp)
+        )
+        Row (modifier = Modifier.fillMaxWidth()){
+            listJK.forEach{selectedGender ->
+                Row (verticalAlignment = Alignment.CenterVertically){
+                    RadioButton(
+                        selected = gender == selectedGender,
+                        onClick = {gender == selectedGender}
+                    )
+                    Text(text = selectedGender)
+                }
+            }
+        }
+        TextField(
+            value = email,
+            onValueChange = {email = it},
+            label = {
+                Text(text = "email")
+            },
+            placeholder = {
+                Text(text = "Isi email anda")
+            },
+            modifier = Modifier.fillMaxWidth().padding(5.dp),
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Email)
+        )
+        TextField(
+            value = alamat,
+            onValueChange = {alamat = it},
+            label = {
+                Text(text = "alamat")
+            },
+            placeholder = {
+                Text(text = "Isi alamat anda")
+            },
+            modifier = Modifier.fillMaxWidth().padding(5.dp)
+        )
+        TextField(
+            value = notelepon,
+            onValueChange = {notelepon = it},
+            label = {
+                Text(text = "notelepon")
+            },
+            placeholder = {
+                Text(text = "Isi notelepon anda")
+            },
+            modifier = Modifier.fillMaxWidth().padding(5.dp),
+            keyboardOptions = KeyboardOptions(keyboardType = KeyboardType.Number)
+        )
+        Button(onClick =  {
+            onSubmitClicked(listData) //sebuah parameter
+        }) {
+            Text(text = "Simpan")
+        }
     }
 }
 
