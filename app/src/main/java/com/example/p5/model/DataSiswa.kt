@@ -9,6 +9,4 @@ data class DataSiswa(
     val gender: String = "",
     val email: String = "",
     val notelepon: String = ""
-){
-
-}
+)
