@@ -13,7 +13,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 import com.example.p5.model.DataSiswa
-import java.lang.IllegalStateException
 
 @Composable
 fun TampilDataview(
@@ -28,8 +27,11 @@ fun TampilDataview(
 
     ) {
         TampilData(param = "Nama", argu = uiState.nama)
+        TampilData(param = "nim", argu = uiState.nim)
         TampilData(param = "Jenis Kelamin", argu = uiState.gender)
+        TampilData(param = "email", argu = uiState.email)
         TampilData(param = "Alamat", argu = uiState.alamat)
+
         Button(onClick = onBackButton) {
             Text(text = "kembali")
         }
