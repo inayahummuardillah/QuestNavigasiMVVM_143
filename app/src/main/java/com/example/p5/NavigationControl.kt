@@ -21,3 +21,11 @@ enum class Halaman{
     TAMPILDATA
 }
 
+@Composable
+fun NavigationControl(
+    modifier: Modifier = Modifier,
+    viewModel: SiswaViewModel = viewModel(),
+    navHost: NavHostController = rememberNavController()
+){
+
+}
