@@ -34,6 +34,15 @@ fun FormulirView(
     onSubmitClicked: (MutableList<String>) -> Unit
 ) {
 
+    var nama by remember { mutableStateOf("") }
+    var nim by remember { mutableStateOf("") }
+    var email by remember { mutableStateOf("") }
+    var alamat by remember { mutableStateOf("") }
+    var notelepon by remember { mutableStateOf("") }
+    var gender by remember { mutableStateOf("") }
+
+    val listData: MutableList<String> = mutableListOf(nama, gender, alamat)
+
 
 }
 
